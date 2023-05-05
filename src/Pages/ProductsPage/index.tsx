@@ -1,8 +1,7 @@
 import {useEffect,useState} from 'react'
 import { Header } from "../../Components/Header"
-import { ButtomMobile, Page, SectionProductsList } from "./style"
+import { Page, SectionProductsList } from "./style"
 import { SectionProducts} from "./style"
-import { SectionTop } from "./style"
 import Notification from './../../../public/notifications.png'
 import Cart from './../../../public/shopping_cart.png'
 import Profile from './../../../public/unsplash_mEZ3PoFGs_k.png'
@@ -11,10 +10,11 @@ import { useProducsApi } from '../../Services/useProductsApi'
 import { CardProduct } from '../../Components/CardProduct'
 import { HeaderPageProducts } from './style'
 import orderInative from './../../../public/order.png'
-import Filter from './../../../public/filter.png'
+//import Filter from './../../../public/filter.png'
 import Menu from './../../../public/menu.png'
 import { Modal } from '../../Components/Modal'
-
+import { TopMenu } from '../../Components/TopMenu'
+import { Filter } from '../../Components/Filter'
 
 export const ProductPage=()=>{
     const [products,setProducts]=useState<ProductType[]>([])
@@ -31,27 +31,16 @@ export const ProductPage=()=>{
 
     return <Page >
       <Header />
+      
     <SectionProducts>
-        <SectionTop>
-            <div>
-                <ButtomMobile>
-                    <img src={Menu} />
-                </ButtomMobile>
-            </div>
-            <div>
-                <img src={Cart} alt="" />
-                <img src={Notification} alt="" />
-                <img className="profile" src={Profile} alt="" />
-            </div>
-        </SectionTop>
+        <TopMenu />
         <HeaderPageProducts>
           <div className="left">
               <h3 className='title-primary'>Produtos</h3>
               <h3 className='title-secondary'>Todos</h3>
           </div>
           <div className="right">
-           
-              <img src={Filter} alt="" />
+              <Filter />
               <img src={orderInative} alt="" />
           
           </div>

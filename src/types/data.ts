@@ -10,7 +10,7 @@ export type ProductType={
     id:number,
     name:string,
     price:number,
-    priceDefaul:number,
+    priceDefault:number,
     ingredientes:string,
     image:string,
     qdt:number,

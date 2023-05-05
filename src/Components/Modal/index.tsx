@@ -6,7 +6,7 @@ export const Modal=()=>{
     const {onModal,setOnModal}=useGlobalContext()
 
     
-    return <Box display={onModal ? 'flex' : 'none'}>
+    return <Box display={onModal ? 'flex': 'none'} onClick={()=>setOnModal(false)}>
         <Mensage >
             <p>ítem adicionado ao carrinho</p>
             <Link to={'/cart'} onClick={()=>setOnModal(false)}>
