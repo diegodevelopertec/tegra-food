@@ -23,8 +23,8 @@ export const ProductPage=()=>{
     const {setOnModal,onModal,onMenuMobile,setMenuMobile}=useGlobalContext()
     const [org,setOrg]=useState(false)
     const [statePageOrg,setStatePageOrg]=useState(false)
-
-
+    const [filtered,setFiltered]=useState(false)
+    const {filterData}=useGlobalContext()
 
 
     useEffect(()=>{
@@ -41,13 +41,19 @@ export const ProductPage=()=>{
     },[])
 
 
+    useEffect(()=>{
+        if(filterData !== null){
+            setProducts(filterData)
+        }
+    },[filterData])
+
+
     const setOrder=()=>{
           setOrg(true)
           setOnModal(true)
           !statePageOrg ?   setOnModal(true) :   setOnModal(false)
           statePageOrg ? setStatePageOrg(false) : setStatePageOrg(true)
-        
-       
+          
     }
    
 setTimeout(()=>{
@@ -58,14 +64,16 @@ setTimeout(()=>{
    
    
     return <Page onClick={()=>onMenuMobile ? setMenuMobile(false) : null} >
-      <Header />
-      
+      <Header /> 
     <SectionProducts>
         <TopMenu />
         <HeaderPageProducts>
           <div className="left">
               <p className='title-primary'>Produtos</p>
-              <p className='title-secondary'>Todos</p>
+              <div className='title-secondary'>
+                <span className="text">Todos</span>
+                <div className="barra"></div>
+              </div>
           </div>
           <div className="right">
               <Filter />
@@ -75,10 +83,11 @@ setTimeout(()=>{
       </HeaderPageProducts>
       <SectionProductsList>
         {
-            products.map((i,k)=>(
+          products.map((i,k)=>(
                 <CardProduct product={i} key={k} />
             ))
         }
+        
       </SectionProductsList>
     </SectionProducts>
     {

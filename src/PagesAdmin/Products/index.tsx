@@ -29,11 +29,16 @@ export const ProductsAdmin=()=>{
        let  getProducts=async()=>{
             let data=await useProducsApi.getProducts()
             setProducts(data)
+        
+        
+         
         }
      getProducts()
     
-    },[])
+    },[products])
 
+
+ 
 
     return<Page onClick={()=>onMenuMobile ? setMenuMobile(false) : null}>
     <Header />
@@ -43,7 +48,10 @@ export const ProductsAdmin=()=>{
       <HeaderPageProducts>
         <div className="left">
             <h4 className='title-primary'>Produtos</h4>
-            <h4 className='title-secondary'>Todos</h4>
+            <div className='title-secondary'>
+                <span className="text">Todos</span>
+                <div className="barra"></div>
+             </div>
         </div>
         <div className="right">
             <img src={order} alt="" onClick={orderAction}/>

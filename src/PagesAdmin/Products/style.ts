@@ -63,6 +63,14 @@ export const HeaderPageProducts=styled.div`
         line-height: 48px;
         letter-spacing: 0.5px;
         color: #DC9000;
+            display: flex;
+            flex-direction: column;
+            .barra{
+                background-color: rgba(220, 144, 0, 1);
+                width: 100%;
+                height: 2px ;
+            }
+        
     }
 
    
