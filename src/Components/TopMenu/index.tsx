@@ -4,13 +4,15 @@ import Notification from './../../../public/notifications.png'
 import Profile from './../../../public/unsplash_mEZ3PoFGs_k.png'
 import Menu from './../../../public/menu.png'
 import Inter from './../../../public/inter.png'
+import { useGlobalContext } from "../../Context/appContext"
 
 
 
 export const TopMenu=()=>{
 
-return <SectionTop>
-            <div>
+    const { onMenuMobile,setMenuMobile}=useGlobalContext()
+return <SectionTop >
+            <div onClick={()=>!onMenuMobile ? setMenuMobile(true) : null}>
                 <ButtomMobile>
                     <img src={Menu} />
                 </ButtomMobile>

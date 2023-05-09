@@ -20,7 +20,7 @@ import { useGlobalContext } from '../../Context/appContext'
 
 export const ProductPage=()=>{
     const [products,setProducts]=useState<ProductType[]>([])
-    const {setOnModal,onModal}=useGlobalContext()
+    const {setOnModal,onModal,onMenuMobile,setMenuMobile}=useGlobalContext()
     const [org,setOrg]=useState(false)
     const [statePageOrg,setStatePageOrg]=useState(false)
 
@@ -57,7 +57,7 @@ setTimeout(()=>{
 },1500)
    
    
-    return <Page >
+    return <Page onClick={()=>onMenuMobile ? setMenuMobile(false) : null} >
       <Header />
       
     <SectionProducts>

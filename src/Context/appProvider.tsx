@@ -9,7 +9,10 @@ type Props={
 export const AppProvider=({children}:Props)=>{
 
     const [onModal,setOnModal]=useState(false)
-    return <context.Provider value={{onModal,setOnModal}}>
+    const [onMenuMobile,setMenuMobile]=useState(false)
+
+
+    return <context.Provider value={{onModal,setOnModal,onMenuMobile,setMenuMobile}}>
         {children}
     </context.Provider>
 }

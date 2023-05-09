@@ -2,14 +2,15 @@ import { Container, LogoContainer } from "./style"
 import { Nav } from "./style"
 import {Link} from 'react-router-dom'
 import Logo from './../../../public/logo.png'
+import { useGlobalContext } from "../../Context/appContext"
 
 
 
 
 export const Header=()=>{
+    const {onMenuMobile}=useGlobalContext()
 
-
-    return <Container>
+    return <Container active={onMenuMobile}>
     <LogoContainer>
         <img src={Logo} />
     </LogoContainer>

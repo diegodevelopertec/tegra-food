@@ -4,14 +4,15 @@ import { TopMenu } from "../../Components/TopMenu";
 import Cart from './../../../public/shopping_cart.png'
 import { CardProductCart } from "../../Components/CardProductCart";
 import { useAppSelector } from "../../hooks/useAppSelector";
+import { useGlobalContext } from "../../Context/appContext";
 
 export const CartPage=()=>{
     const {cart}=useAppSelector(state=>state)
-    
+    const {onMenuMobile,setMenuMobile}=useGlobalContext()
 
 
 
-    return <Box>
+    return <Box onClick={()=>onMenuMobile ? setMenuMobile(false) : null}>
          <TopMenu />
        <BoxPage>
         <h2>Meu Carrinho</h2>

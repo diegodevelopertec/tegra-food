@@ -18,7 +18,7 @@ import { Modal } from "../../Components/Modal"
 export const ProductsAdmin=()=>{
 
     const [products,setProducts]=useState<ProductType[]>([])
-    const {setOnModal}=useGlobalContext()
+    const {setOnModal,onMenuMobile,setMenuMobile}=useGlobalContext()
     const navigate=useNavigate()
 
     const orderAction=()=>{
@@ -34,7 +34,8 @@ export const ProductsAdmin=()=>{
     
     },[])
 
-    return<Page >
+
+    return<Page onClick={()=>onMenuMobile ? setMenuMobile(false) : null}>
     <Header />
     
   <SectionProducts>

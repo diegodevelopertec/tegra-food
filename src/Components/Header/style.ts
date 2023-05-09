@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
 type Props={
-    active:true;
+    active:boolean;
 }
 
-export const Container=styled.header`
+export const Container=styled.header<Props>`
     background-color: #6A0000;
 
 
-@media screen and (max-width:950px){
-    display: none;
-}
+    @media screen and (max-width:950px){
+        display:${Props=>Props.active  ? 'flex':'hidden'};
+        width: ${Props=>Props.active  ? '255px':'0'};
+        transition: all ease .6s;
+        flex-direction: column;
+        left:${Props=>Props.active  ? '0':'-999px'};
+        height: 100vh;
+        position: fixed;
+    }
 `
 
 
@@ -20,12 +26,15 @@ export const LogoContainer=styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 42px;
+    //margin: 42px;
+    width: 100%;
 
     img{
         width: 170px;
         height: 140px;
     }
+
+    
 `
 
 export const Nav=styled.nav`
