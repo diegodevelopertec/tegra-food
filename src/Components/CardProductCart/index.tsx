@@ -27,12 +27,12 @@ export const CardProductCart=({product}:Prop)=>{
                 </div>
             </BoxLeft>
             <BoxRigth>
-                <div className="top-right">
-                   <span className="btn-remove-mobile"><img src={CloseItem} alt="" /></span>
+                <div className="top-right" >
+                   <span className="btn-remove-mobile"  onClick={()=>removeProductDataCart(product)}><img src={CloseItem} alt="" /></span>
                    <div className="price">R$ {product.price.toFixed(2).replace('.',',')}</div> 
                 </div>
 
-                <div className="select-qdt" onClick={()=>{}}>
+                <div className="select-qdt"  >
                     <span>1x</span>
                     <img src={Expand} />
                 </div>
