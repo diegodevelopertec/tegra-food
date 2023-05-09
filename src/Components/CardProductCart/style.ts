@@ -3,7 +3,8 @@ import styled from "styled-components"
 
 export const Box=styled.div`
     display: flex;
-    width: 100%;
+  
+  
 `
 
 export const BoxCardContext=styled.div`
@@ -21,9 +22,9 @@ export const BoxCardContext=styled.div`
     border-radius: 8px;
     margin-bottom: 9px;
 
-    @media screen and (min-width:280px) and (max-width:844px){
+    @media screen and (min-width:280px) and (max-width:950px){
         justify-content:space-around;
-        padding: 12px;
+       padding: 12px 5px;
         margin-bottom: 4px;
 
        
@@ -72,14 +73,14 @@ export const BoxLeft=styled.div`
     color: rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 844px) {
+@media screen and (max-width: 950px) {
     img{
         width: 60px;
         height: 60px;
         margin-right: 7px;
     }
     h3{
-        width: 131px;
+       width: 131px;
         height: 18px;
         font-size: 12px;
     }
@@ -133,6 +134,8 @@ button{
     letter-spacing: 0.5px;
     color: #FFFFFF;
     cursor: pointer;
+
+    
 }
 
 .btn-remove-mobile{
@@ -171,10 +174,21 @@ button{
     span{
         color: #FFFFFF;
     }
+
+  
 }
-@media screen and (max-width: 844px) {
-   span{
-    font-size: 12px;
+@media screen and (max-width: 950px) {
+    .price{
+        font-size: 12px;
+    }
+   .select-qdt span{
+    font-size: 14px;
+   
+    @media screen and (max-width:950px) {
+        width:55px;
+        justify-content: space-around;
+       
+    }
    }
    button{
     width: auto;
@@ -184,6 +198,11 @@ button{
    }
    .btn-remove-mobile{
       display: flex;
+      height: 24px;
+      width: 16px;
+      justify-content: end;
+       width: 100%;
+   
    }
 }
 
@@ -202,7 +221,7 @@ img{
     cursor: pointer;
 }
 
-@media screen and (max-width:844px) {
+@media screen and (max-width:950px) {
     display:none;
 }
 `

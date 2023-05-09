@@ -26,6 +26,10 @@ export const SectionProducts=styled.section`
 export const SectionProductsList=styled.div`
   padding: 13px;
 
+@media screen and (max-width:950px){
+    padding:5px;
+    width: 100%;
+}
 `
 
 export const HeaderPageProducts=styled.div`
@@ -74,25 +78,24 @@ export const HeaderPageProducts=styled.div`
             margin-right:22.5px;
         }
 }
-@media screen and (max-width:844px) {
-    font-size: 18px;
-    width: 100%;
-    padding: 15px;
-    margin: 0;
+@media screen and (max-width:950px) {
+    margin-top: 20px;
+    margin-bottom: 17px;
+    justify-content: space-between;
+    width: auto;
+    
     .left{
-       h3{
+        .title-primary , .title-secondary{
             font-size: 18px;
-       }
-
-        .title-secondary{
-            margin-left: 8px;
-        }
+      }
     }
+
     .right{
         img{
             height: 18px;
             width: 18px;
-           
+            margin-left: 10px;
+            margin-right:10px;
         }
     }
    }

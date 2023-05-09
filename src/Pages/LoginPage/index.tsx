@@ -1,5 +1,5 @@
 import { Container,  InputForm } from "./style"
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { ContainerImage } from "./style"
 import { ContainerForm } from "./style"
 import { Form } from "./style"
@@ -9,6 +9,9 @@ import Email from './../../../public/email.png'
 import Pass from './../../../public/pass.png'
 
 export const LoginPage=()=>{
+
+    const Navigate=useNavigate()
+
     return <Container>
     <ContainerImage>
         <img src={Image} />
@@ -26,7 +29,7 @@ export const LoginPage=()=>{
               <img src={Pass} height={'18.5px'} width={'20px'} />
               <input placeholder="senha"/>
            </InputForm>
-           <input type="submit" />
+           <input type="submit" value={'Entrar'} onClick={()=>Navigate('/products')} />
            <div className="container-or">
                 <span className="line"></span>
                 <span className="or">ou</span>

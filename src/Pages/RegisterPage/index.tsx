@@ -37,7 +37,7 @@ export const RegisterPage=()=>{
               <img src={Pass} height={'18.5px'} width={'20px'} />
               <input type="password" placeholder="confirme senha"/>
            </InputForm>
-           <input type="submit" />
+           <input type="submit" value={'Entrar'} />
            <div className="login-link">
              <p className="ultima-line">Já tem uma conta?<Link to='/' >Entrar</Link> </p> 
            </div>

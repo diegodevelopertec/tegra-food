@@ -64,8 +64,8 @@ setTimeout(()=>{
         <TopMenu />
         <HeaderPageProducts>
           <div className="left">
-              <h3 className='title-primary'>Produtos</h3>
-              <h3 className='title-secondary'>Todos</h3>
+              <p className='title-primary'>Produtos</p>
+              <p className='title-secondary'>Todos</p>
           </div>
           <div className="right">
               <Filter />

@@ -3,14 +3,22 @@ import { Box,BoxCardContext,BoxClear,BoxLeft,BoxRigth} from "./style"
 import clear from './../../../public/lixeira.png'
 import CloseItem from './../../../public/close.png'
 import Expand from './../../../public/expand.png'
+import { useDispatch } from "react-redux"
+import { removeDataCart } from "../../redux/slices/cart"
 
 
 type Prop={
     product:ProductType
 }
 export const CardProductCart=({product}:Prop)=>{
+
+    const dispacth=useDispatch()
+    const removeProductDataCart=(product:ProductType)=>{
+        dispacth(removeDataCart(product))
+    }
+
     return <Box>
-            <BoxCardContext>
+           <BoxCardContext>
             <BoxLeft>
                 <img src={product.image} />
                 <div className="text">
@@ -33,7 +41,7 @@ export const CardProductCart=({product}:Prop)=>{
 
         </BoxCardContext>
         <BoxClear>
-            <img src={clear} alt="" />
+            <img src={clear} alt="" onClick={()=>removeProductDataCart(product)} />
         </BoxClear>
     </Box>
 }

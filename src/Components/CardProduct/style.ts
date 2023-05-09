@@ -17,7 +17,8 @@ export const Box=styled.div`
 
     @media screen and (min-width:280px) and (max-width:980px){
         justify-content:space-around;
-        padding: 12px;
+        padding: 12px 9px;
+        width: 100%;
        
     }
 
@@ -29,7 +30,7 @@ export const Box=styled.div`
 export const BoxLeft=styled.div`
     display: flex;
     align-items: center;
-    width: 100%;
+  
     
   
     img{

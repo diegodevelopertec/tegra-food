@@ -2,8 +2,12 @@ import styled from "styled-components";
 
 
 export const Box=styled.div`
-   width: 100%;
+  width: 100%;
+  overflow-x: none;
 
+@media screen and (max-width:950px) {
+    width: 100vw;
+}
 `
 
 export const BoxPage=styled.div`
@@ -28,20 +32,27 @@ export const BoxPage=styled.div`
 }
 
     @media screen  and (max-width: 950px){
-        padding: 20px 12px;
-        width: 100%;
+        padding-top: 20px;
+        padding-right:6px;
+        padding-left:6px;
+      
+       
     } 
 `
 
 export const ContainerProductsCart=styled.div`
     margin-top: 27px;
+  
+    
+   
     @media screen and (max-width:950px) {
         display: flex;
-        flex-direction: column;
+        flex-direction:column;
         align-items: center;
-        justify-content: center;
-        background-color: red;
-        margin: 12px;
+       width: 100%;
+    
+      
+       
        
     }
 

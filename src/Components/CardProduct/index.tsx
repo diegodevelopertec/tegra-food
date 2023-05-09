@@ -2,7 +2,8 @@ import { ProductType } from "../../types/data"
 import { Box, BoxLeft, BoxRigth } from "./style"
 import { useGlobalContext } from "../../Context/appContext"
 import { useLocation } from "react-router-dom"
-
+import { useDispatch } from "react-redux"
+import { addDataCart } from "../../redux/slices/cart"
 
 type Prop={
     product:ProductType
@@ -10,6 +11,14 @@ type Prop={
 
 export const CardProduct=({product}:Prop)=>{
     const {setOnModal}=useGlobalContext()
+    const dispatch=useDispatch()
+
+    const addProductToCart=(product:ProductType)=>{
+        dispatch(addDataCart(product))
+        console.log(product)
+        setOnModal(true)
+    }
+
 
     return <Box>
         <BoxLeft>
@@ -22,7 +31,7 @@ export const CardProduct=({product}:Prop)=>{
         <BoxRigth>
             <span >R$ {product.price.toFixed(2).replace('.',',')}</span>
             
-            { !location.href.includes('admin') &&   <button onClick={()=>setOnModal(true)}>comprar</button>}
+            { !location.href.includes('admin') &&   <button onClick={()=>addProductToCart(product)}>comprar</button>}
             { location.href.includes('admin') &&   <button onClick={()=>{}}>Editar</button>}
         </BoxRigth>
 
