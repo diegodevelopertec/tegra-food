@@ -10,14 +10,22 @@ import { useProducsApi } from '../../Services/useProductsApi'
 import { CardProduct } from '../../Components/CardProduct'
 import { HeaderPageProducts } from './style'
 import orderInative from './../../../public/order.png'
+import orderActive from './../../../public/orderac.png'
 //import Filter from './../../../public/filter.png'
 import Menu from './../../../public/menu.png'
 import { Modal } from '../../Components/Modal'
 import { TopMenu } from '../../Components/TopMenu'
 import { Filter } from '../../Components/Filter'
+import { useGlobalContext } from '../../Context/appContext'
 
 export const ProductPage=()=>{
     const [products,setProducts]=useState<ProductType[]>([])
+    const {setOnModal,onModal}=useGlobalContext()
+    const [org,setOrg]=useState(false)
+    const [statePageOrg,setStatePageOrg]=useState(false)
+
+
+
 
     useEffect(()=>{
        let  getProducts=async()=>{
@@ -25,10 +33,30 @@ export const ProductPage=()=>{
             setProducts(data)
         }
      getProducts()
+
+     if(org){
+        setOrg(false)
+     }
     
     },[])
 
 
+    const setOrder=()=>{
+          setOrg(true)
+          setOnModal(true)
+          !statePageOrg ?   setOnModal(true) :   setOnModal(false)
+          statePageOrg ? setStatePageOrg(false) : setStatePageOrg(true)
+        
+       
+    }
+   
+setTimeout(()=>{
+    if(onModal){
+        setOrg(false)
+    }
+},1500)
+   
+   
     return <Page >
       <Header />
       
@@ -41,7 +69,7 @@ export const ProductPage=()=>{
           </div>
           <div className="right">
               <Filter />
-              <img src={orderInative} alt="" />
+              <img src={statePageOrg ? orderActive : orderInative } onClick={setOrder} alt="" /> 
           
           </div>
       </HeaderPageProducts>
@@ -53,9 +81,17 @@ export const ProductPage=()=>{
         }
       </SectionProductsList>
     </SectionProducts>
-   
+    {
+        org &&   <Modal link={" "} textLeft={"Ítens organizados de A à Z" } 
+        textLink={"Cancelar"} ></Modal>
 
-
+    }
+    {
+        (!statePageOrg ||  statePageOrg && !org) &&  <Modal link={"/cart" } textLeft={ "ítem adicionado ao carrinho" } 
+        textLink={"ir para o carrinho" }   ></Modal>
+    }
+        
+ 
 
 
     </Page>

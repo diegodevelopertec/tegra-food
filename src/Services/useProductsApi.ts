@@ -2,6 +2,14 @@ import axios from "axios"
 import { baseUrl } from "./config"
 import { ProductType } from "../types/data"
 
+
+type ProductPost={
+    name: string;
+    priceDefault: number;
+    ingredientes: string;
+    image: string;
+  
+}
 export const useProducsApi={
 
 
@@ -20,9 +28,16 @@ export const useProducsApi={
             return false
         }
     },
-    addProduct:async(product:ProductType)=>{
+    addProduct:async(product:ProductPost)=>{
         try{
-            await axios.post(`${baseUrl}products`,product)
+            await axios.post(`${baseUrl}products`,{
+                    name: product.name,
+                    priceDefault: product.priceDefault,
+                    price:product.priceDefault,
+                    ingredientes: product.ingredientes,
+                    image: product.image,
+                    qdt: 1
+            })
         }catch{
             return false
         }

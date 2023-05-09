@@ -10,15 +10,14 @@ const {onModal,setOnModal}=useGlobalContext()
 
 setTimeout(()=>{
   if(onModal){
-  setOnModal(false)
+    setOnModal(false)
   }
-
-  
+ 
 },1500)
     return <ContainerRoutesApp>
     
       <Rotas />
-      <Modal/>
+    
     
     </ContainerRoutesApp>
 }

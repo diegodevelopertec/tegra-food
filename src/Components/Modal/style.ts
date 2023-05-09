@@ -41,9 +41,16 @@ export const Mensage=styled.div`
     line-height: 180%;
     p{
         color: #FFFFFF;
+        font-family: Poppins;
+        font-style: Medium;
+        font-size: 16px;
     }
     a{
-        color:#E6A11F;;
+        color:#E6A11F;
+        font-family: Poppins;
+        font-style: Medium;
+        font-size: 16px;
+
     }
 
     @media screen and (max-width:950px){

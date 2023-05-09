@@ -1,6 +1,8 @@
 import { ProductType } from "../../types/data"
 import { Box, BoxLeft, BoxRigth } from "./style"
 import { useGlobalContext } from "../../Context/appContext"
+import { useLocation } from "react-router-dom"
+
 
 type Prop={
     product:ProductType
@@ -19,7 +21,9 @@ export const CardProduct=({product}:Prop)=>{
         </BoxLeft>
         <BoxRigth>
             <span >R$ {product.price.toFixed(2).replace('.',',')}</span>
-            <button onClick={()=>setOnModal(true)}>comprar</button>
+            
+            { !location.href.includes('admin') &&   <button onClick={()=>setOnModal(true)}>comprar</button>}
+            { location.href.includes('admin') &&   <button onClick={()=>{}}>Editar</button>}
         </BoxRigth>
 
 

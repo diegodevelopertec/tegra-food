@@ -5,10 +5,10 @@ export const Page=styled.div`
     background-color: #E5E5E5;
     display: flex;
 
-    @media screen and (max-width:844px){
-        width: 100vw;
-    }
- 
+   
+ @media screen and (max-width:950px) {
+    width: 100vw;
+ }
 
 `
 
@@ -16,8 +16,8 @@ export const Page=styled.div`
 export const SectionProducts=styled.section`
     flex: 1;
 
-    @media screen and (max-width:844px) {
-            font-size: 18px;
+    @media screen and (max-width:930px) {
+            font-size: 15px;
             width: 100%;
         
     }
@@ -26,6 +26,13 @@ export const SectionProducts=styled.section`
 export const SectionProductsList=styled.div`
   padding: 13px;
 
+
+  @media screen and (max-width:930px) {
+          font-size: 12px;
+           width: 100%;
+           padding:22px 5px;
+        
+    }
 `
 
 export const HeaderPageProducts=styled.div`
@@ -35,7 +42,7 @@ export const HeaderPageProducts=styled.div`
     margin-bottom: 57px;
     margin-top: 64px;
     justify-content: space-between;
-    height: 50px;
+    
   
 .left{
     display: flex;
@@ -66,22 +73,34 @@ export const HeaderPageProducts=styled.div`
         align-items: center;
         height: 100%;
         justify-content: center;
+        button{
+           background-color: rgba(220, 144, 0, 1);
+           border-radius: 4px;
+           border: none;
+           padding: 12px 8px;
+           font-size: 18px;
+           color: rgba(255, 255, 255, 1);
+           cursor: pointer;
+           span{
+            margin-left: 10px;
+           }
+        }
         img{
             height: 35px;
-            cursor: pointer;
             width: 35px;
             margin-left: 22.5px;
             margin-right:22.5px;
         }
 }
-@media screen and (max-width:844px) {
-    font-size: 18px;
+@media screen and (max-width:930px) {
+    padding: 5px;
+    margin: 0px;
+    margin-top: 12px;
     width: 100%;
-    padding: 15px;
-    margin: 0;
     .left{
-       h3{
-            font-size: 18px;
+       .title-primary,.title-secondary{
+           font-size: 15px;
+           
        }
 
         .title-secondary{
@@ -90,8 +109,18 @@ export const HeaderPageProducts=styled.div`
     }
     .right{
         img{
-            height: 18px;
-            width: 18px;
+            height: 15px;
+            width: 15px;
+        }
+
+        button{
+           background-color: rgba(220, 144, 0, 1);
+           border-radius: 4px;
+           border: none;
+           padding: 13px 7px;
+           font-size: 12px;
+           color: rgba(255, 255, 255, 1);
+           cursor: pointer;
            
         }
     }

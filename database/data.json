@@ -1,93 +1,102 @@
 {
-    "products":[
-        {
-            "id":1,
-            "name":"Pizza de Marguerita",
-            "price":60.00,
-            "categoria":"Pizza",
-            "image":"/public/imgs/img1.jpeg",
-            "ingredientes":"(Muçarela, tomate, majericão , orégano)"
-        },{
-            
-                "id":2,
-                "name":"Torta de Leite Ninho",
-                "price":70.00,
-                "categoria":"",
-                "image":"/public/imgs/img2.jpeg",
-               "ingredientes":"Massa de Baunilha; Creme de ninho Tradicional; Morango; Chantilly"
-            
-        },{
-            
-            "id":3,
-            "name":"Lanche X-Burguer",
-            "price":22.00,
-            "categoria":"",
-            "image":"/public/imgs/img3.jpeg",
-           "ingredientes":"(Pão, hamburguer, alface, tomate, queijo cheddar, cebola e picles)"
-        
-    },{
-            
-        "id":4,
-        "name":" Pizza de Strogonofe",
-        "price":65.00,
-        "categoria":"Pizza",
-        "image":"/public/imgs/img4.jpeg",
-       "ingredientes":"(Strogonofe, muçarela e orégano)"
-    
-  },{
-            
-    "id":5,
-    "name":"Açaí com frutas ",
-    "price":18.00,
-    "categoria":"Açai",
-    "image":"/public/imgs/img5.jpeg",
-   "ingredientes":"(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)"
-
-},{
-            
-    "id":6,
-    "name":"Refrigerante Coca-Cola  350ml",
-    "price":6.00,
-    "categoria":"Bebidas",
-    "image":"/public/imgs/img6.jpeg",
-   "ingredientes":""
-
-},{
-            
-    "id":7,
-    "name":"Taça de sonho de valsa",
-    "price":15.00,
-    "categoria":"Bebidas",
-    "image":"/public/imgs/img7.jpeg",
-   "ingredientes":"(Chocolate branco e preto, sonho de valsa, morango e leite condensado)"
-
-},{
-            
-    "id":8,
-    "name":"Barca de Açaí",
-    "price":22.00,
-    "categoria":"Açai",
-    "image":"/public/imgs/img8.png",
-   "ingredientes":"(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)"
-
-},{
-            
-    "id":9,
-    "name":"Refrigerante Coca-Cola zero  350ml",
-    "price":5.00,
-    "categoria":"Bebidas",
-    "image":"/public/imgs/img9.jpeg",
-   "ingredientes":""
-
-},{
-            
-    "id":10,
-    "name":"Lanche de Churrasco",
-    "price":30.00,
-    "categoria":"",
-    "image":"/public/imgs/img10.jpeg",
-   "ingredientes":"(Pão, hamburguer, calabresa, iscas de carne, muçarela, cebola e picles)"
-
-}
-    ]
+  "products": [
+    {
+      "id": 1,
+      "name": "Pizza de Marguerita",
+      "price": 60,
+      "categoria": "Pizza",
+      "image": "/public/imgs/img1.jpeg",
+      "ingredientes": "(Muçarela, tomate, majericão , orégano)"
+    },
+    {
+      "id": 2,
+      "name": "Torta de Leite Ninho",
+      "price": 70,
+      "categoria": "",
+      "image": "/public/imgs/img2.jpeg",
+      "ingredientes": "Massa de Baunilha; Creme de ninho Tradicional; Morango; Chantilly"
+    },
+    {
+      "id": 3,
+      "name": "Lanche X-Burguer",
+      "price": 22,
+      "categoria": "",
+      "image": "/public/imgs/img3.jpeg",
+      "ingredientes": "(Pão, hamburguer, alface, tomate, queijo cheddar, cebola e picles)"
+    },
+    {
+      "id": 4,
+      "name": " Pizza de Strogonofe",
+      "price": 65,
+      "categoria": "Pizza",
+      "image": "/public/imgs/img4.jpeg",
+      "ingredientes": "(Strogonofe, muçarela e orégano)"
+    },
+    {
+      "id": 5,
+      "name": "Açaí com frutas ",
+      "price": 18,
+      "categoria": "Açai",
+      "image": "/public/imgs/img5.jpeg",
+      "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)"
+    },
+    {
+      "id": 6,
+      "name": "Refrigerante Coca-Cola  350ml",
+      "price": 6,
+      "categoria": "Bebidas",
+      "image": "/public/imgs/img6.jpeg",
+      "ingredientes": ""
+    },
+    {
+      "id": 7,
+      "name": "Taça de sonho de valsa",
+      "price": 15,
+      "categoria": "Bebidas",
+      "image": "/public/imgs/img7.jpeg",
+      "ingredientes": "(Chocolate branco e preto, sonho de valsa, morango e leite condensado)"
+    },
+    {
+      "id": 8,
+      "name": "Barca de Açaí",
+      "price": 22,
+      "categoria": "Açai",
+      "image": "/public/imgs/img8.png",
+      "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)"
+    },
+    {
+      "id": 9,
+      "name": "Refrigerante Coca-Cola zero  350ml",
+      "price": 5,
+      "categoria": "Bebidas",
+      "image": "/public/imgs/img9.jpeg",
+      "ingredientes": ""
+    },
+    {
+      "id": 10,
+      "name": "Lanche de Churrasco",
+      "price": 30,
+      "categoria": "",
+      "image": "/public/imgs/img10.jpeg",
+      "ingredientes": "(Pão, hamburguer, calabresa, iscas de carne, muçarela, cebola e picles)"
+    },
+    {
+      "name": "Burguer X Salada",
+      "priceDefault": 18,
+      "price": 18,
+      "ingredientes": "ddde34444",
+      "image": "",
+      "qdt": 1,
+      "id": 11
+    },
+    {
+      "name": "Burguer X Salada Bacon",
+      "priceDefault": 25,
+      "price": 25,
+      "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)",
+      "image": "",
+      "qdt": 1,
+      "id": 12
+    }
+  ]
 }
