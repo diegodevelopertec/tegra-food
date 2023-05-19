@@ -11,7 +11,9 @@ export const AppProvider=({children}:Props)=>{
 
     const [onModal,setOnModal]=useState(false)
     const [onMenuMobile,setMenuMobile]=useState(false)
-    const [filterData, setFilterData]=useState<ProductType[] | null>(null)
+    const [filterData, setFilterData]=useState<ProductType[] | null | []>(null)
+  
+
 
     return <context.Provider value={{onModal,setOnModal,onMenuMobile,setMenuMobile,filterData,setFilterData}}>
         {children}

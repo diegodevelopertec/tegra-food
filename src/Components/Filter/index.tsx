@@ -1,5 +1,5 @@
 import { useLayoutEffect, useState } from 'react'
-import { ItemFilter,  BoxFilter, BoxTopFilter, BoxItemsFilter, BoxItens } from './style'
+import { ItemFilter,  BoxFilter, BoxTopFilter, BoxItemsFilter, BoxItens} from './style'
 import filter from './../../../public/filter.png'
 import { toToastItem } from 'react-toastify/dist/utils'
 import { useGlobalContext } from '../../Context/appContext'
@@ -29,13 +29,12 @@ export const Filter=()=>{
        setExpandFilter(false) 
        let products=await useProducsApi.getProducts()
        let filteredProducts=products.filter(i=>i.price >= dataFilter[0] && i.price <= dataFilter[1] || dataFilter[0] == 46 ? i.price >= dataFilter[0] : null )
-       //let FilteredProductsTwo=products.filter(i=>dataFilter[0] == 46 ? i.price >= dataFilter[0] : null)
-       
-     if(filteredProducts){
-       setFilterData(filteredProducts);
-     }
+    
+        if(filteredProducts){
+          setFilterData(filteredProducts);
+        }
       
-
+      
       
      }
 
@@ -45,12 +44,14 @@ export const Filter=()=>{
         </BoxTopFilter>
         {expandFilter && <BoxItemsFilter>
             <p>Filtrar por preço:</p>
-            <BoxItens>
+            <div className='cx-itens'>
                 <ItemFilter onClick={()=>ClickFilterAction(5,25)}>R$5 à R$25</ItemFilter>
                 <ItemFilter onClick={()=>ClickFilterAction(26,45)}>R$26 à R$45</ItemFilter>
                 <ItemFilter onClick={()=>ClickFilterAction(46,46)}>R$46 ou mais</ItemFilter>
-            </BoxItens>
-        </BoxItemsFilter>}
+            </div>
+            </BoxItemsFilter>
+      }
+           
     </BoxFilter>
 
    

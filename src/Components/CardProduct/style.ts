@@ -10,7 +10,7 @@ export const Box=styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 12px;
-    border: 0.25px solid #000000;
+    border: 0.25px solid rgba(0, 0, 0, 1);
     box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     margin-bottom: 9px;

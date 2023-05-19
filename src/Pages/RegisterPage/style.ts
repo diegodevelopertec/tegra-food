@@ -5,15 +5,14 @@ import {GlobalStyle} from './../../ThemeStyle'
 
 export const Container=styled.div`
     background-color:${'#FFFFFF'};
-    height: 100vh;
     display: flex;
+ 
+    
     
 `
 
 export const ContainerImage=styled.div`
-    height: 100vh;
-    display: flex;
-
+   display: flex;
     @media screen and (max-width:950px)  {
         display: none;
     }
@@ -36,6 +35,7 @@ align-items: center;
 width: 343px;
 height: 497px;
 margin: 155px auto;
+
 
     h2{
         color: #223263;

@@ -9,7 +9,7 @@ import { useGlobalContext } from "../../Context/appContext";
 export const CartPage=()=>{
     const {cart}=useAppSelector(state=>state)
     const {onMenuMobile,setMenuMobile}=useGlobalContext()
-
+   
 
 
     return <Box onClick={()=>onMenuMobile ? setMenuMobile(false) : null}>
@@ -18,10 +18,10 @@ export const CartPage=()=>{
         <h2>Meu Carrinho</h2>
       
       <ContainerProductsCart>
-            {
+            {cart.productsCart.length > 0 ?
                 cart.productsCart.length > 0 && cart.productsCart.map((i,k)=>(
                     <CardProductCart product={i} key={k}/>
-                 ))
+                 )) : <div className="error-cart">Carrinho vazio</div>
             }
             </ContainerProductsCart>
 
@@ -45,7 +45,7 @@ export const CartPage=()=>{
             </div>
             <div className="linha">
                     <div className="left">TOTAL</div>
-                    <div className="right">R$83,00</div>
+                    <div className="right">R${cart.totalcart.toFixed(2)}</div>
             </div>
             </TableCart>
         </BoxCupomTableCart>

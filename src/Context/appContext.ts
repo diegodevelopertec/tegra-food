@@ -9,6 +9,7 @@ type ContextType={
     setMenuMobile:(state:boolean)=>void,
     filterData:ProductType[]  | null,
     setFilterData:([]:ProductType[] )=>void,
+   
 
     
 }

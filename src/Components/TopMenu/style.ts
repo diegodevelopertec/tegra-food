@@ -15,8 +15,8 @@ export const SectionTop=styled.div`
     }
    .profile{
         border-radius: 100%;
-        height: 53px;
-        width:53px;
+        height: 35px;
+        width:35px;
     }
   
     @media screen and (max-width:950px){
@@ -31,6 +31,7 @@ export const ButtomMobile=styled.button`
 @media screen and (max-width:950px) {
     display: flex;
 }
+
 img{
     height: 32px;
     width: 32px;

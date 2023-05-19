@@ -2,19 +2,14 @@ import styled from "styled-components";
 
 
 export const Box=styled.div`
-  width: 100%;
-  overflow-x: none;
 
-@media screen and (max-width:950px) {
-    width: 100vw;
-}
 `
 
 export const BoxPage=styled.div`
     padding-top: 165px;
     padding-right:40px;
     padding-left:40px;
-    width:100%;    
+    
     h2{
         height: 48px;
         font-family: 'Poppins';
@@ -42,20 +37,23 @@ export const BoxPage=styled.div`
 
 export const ContainerProductsCart=styled.div`
     margin-top: 27px;
-  
-    
-   
-    @media screen and (max-width:950px) {
+
+    .error-cart{
+        font-size: 25px;
+        Font-family: Poppins;
+        Font-style: Medium;
+        margin: 30px 0;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    @media screen and (max-width:757px) {
         display: flex;
+        justify-content: center;
         flex-direction:column;
-        align-items: center;
-       width: 100%;
-    
-      
-       
+        //padding:6px;
        
     }
-
+   
+   
 `
 
 export const CardCumpom=styled.div`
@@ -165,9 +163,6 @@ flex: 1;
 
 .linha{
     display: flex;
-   
-
-  
 }
 .left{
     flex: 1;

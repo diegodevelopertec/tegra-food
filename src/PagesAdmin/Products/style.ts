@@ -4,11 +4,9 @@ import styled from "styled-components";
 export const Page=styled.div`
     background-color: #E5E5E5;
     display: flex;
-
+    min-height: 100vh;
    
- @media screen and (max-width:950px) {
-    width: 100vw;
- }
+
 
 `
 

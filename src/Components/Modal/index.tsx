@@ -21,11 +21,3 @@ export const Modal=({ link,textLeft,textLink}:Props)=>{
     </Box>
 
 }
-
-{
-    /* <p>ítem adicionado ao carrinho</p>
-            <Link to={'/cart'} onClick={()=>setOnModal(false)}>
-               ir para o carrinho
-            </Link>
-            */
-}

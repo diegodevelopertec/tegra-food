@@ -131,8 +131,17 @@ display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 4px;
+position: relative;
+  overflow: hidden;
 
     span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: #f1f1f1;
+        cursor: pointer;
        font-family: Poppins;
         font-style: Medium;
         font-size: 14px;
@@ -140,7 +149,14 @@ border-radius: 4px;
         line-height: 150%;
     }
     input{
-        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+       
     }
 
    @media screen  and (max-width:950px){
@@ -159,7 +175,7 @@ justify-content: flex-end;
 
 
 
-button{
+button,.cadastro{
     cursor: pointer;
     font-family: Poppins;
     font-style: Medium;

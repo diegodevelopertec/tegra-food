@@ -1,8 +1,8 @@
 import { ProductType } from "../../types/data"
 import { Box,BoxCardContext,BoxClear,BoxLeft,BoxRigth} from "./style"
-import clear from './../../../public/lixeira.png'
-import CloseItem from './../../../public/close.png'
-import Expand from './../../../public/expand.png'
+import clear from '/lixeira.png'
+import CloseItem from '/close.png'
+import Expand from '/expand.png'
 import { useDispatch } from "react-redux"
 import { removeDataCart } from "../../redux/slices/cart"
 
@@ -20,10 +20,10 @@ export const CardProductCart=({product}:Prop)=>{
     return <Box>
            <BoxCardContext>
             <BoxLeft>
-                <img src={product.image} />
+                <img src={`http://localhost:5000/${product.image}`} />
                 <div className="text">
                 <h3>{product.name}</h3>
-                    <p className="desc">{product.ingredientes}</p>
+                    <p className="desc">{product.description}</p>
                 </div>
             </BoxLeft>
             <BoxRigth>

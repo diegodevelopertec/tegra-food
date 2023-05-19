@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Pizza de Marguerita",
       "price": 60,
-      "categoria": "Pizza",
+      "category": "Pizza",
       "image": "/public/imgs/img1.jpeg",
       "ingredientes": "(Muçarela, tomate, majericão , orégano)"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "name": "Torta de Leite Ninho",
       "price": 70,
-      "categoria": "",
+      "category": "",
       "image": "/public/imgs/img2.jpeg",
       "ingredientes": "Massa de Baunilha; Creme de ninho Tradicional; Morango; Chantilly"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "Lanche X-Burguer",
       "price": 22,
-      "categoria": "",
+      "category": "",
       "image": "/public/imgs/img3.jpeg",
       "ingredientes": "(Pão, hamburguer, alface, tomate, queijo cheddar, cebola e picles)"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "name": " Pizza de Strogonofe",
       "price": 65,
-      "categoria": "Pizza",
+      "category": "Pizza",
       "image": "/public/imgs/img4.jpeg",
       "ingredientes": "(Strogonofe, muçarela e orégano)"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "Açaí com frutas ",
       "price": 18,
-      "categoria": "Açai",
+      "category": "Açai",
       "image": "/public/imgs/img5.jpeg",
       "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "Refrigerante Coca-Cola  350ml",
       "price": 6,
-      "categoria": "Bebidas",
+      "category": "Bebidas",
       "image": "/public/imgs/img6.jpeg",
       "ingredientes": ""
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "name": "Taça de sonho de valsa",
       "price": 15,
-      "categoria": "Bebidas",
+      "category": "Bebidas",
       "image": "/public/imgs/img7.jpeg",
       "ingredientes": "(Chocolate branco e preto, sonho de valsa, morango e leite condensado)"
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "name": "Barca de Açaí",
       "price": 22,
-      "categoria": "Açai",
+      "category": "Açai",
       "image": "/public/imgs/img8.png",
       "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)"
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "name": "Refrigerante Coca-Cola zero  350ml",
       "price": 5,
-      "categoria": "Bebidas",
+      "category": "Bebidas",
       "image": "/public/imgs/img9.jpeg",
       "ingredientes": ""
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "name": "Lanche de Churrasco",
       "price": 30,
-      "categoria": "",
+      "category": "",
       "image": "/public/imgs/img10.jpeg",
       "ingredientes": "(Pão, hamburguer, calabresa, iscas de carne, muçarela, cebola e picles)"
     },
@@ -97,6 +97,70 @@
       "image": "",
       "qdt": 1,
       "id": 12
+    },
+    {
+      "name": "Burguer X Salada Bacon",
+      "priceDefault": 18,
+      "price": 18,
+      "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)",
+      "image": "",
+      "qdt": 1,
+      "id": 13
+    },
+    {
+      "name": "Pizza Bacon",
+      "priceDefault": 55,
+      "price": 55,
+      "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)",
+      "image": "",
+      "qdt": 1,
+      "id": 14
+    },
+    {
+      "name": "Pizza Bacon-X",
+      "priceDefault": 49,
+      "price": 49,
+      "ingredientes": "burguer x",
+      "image": "",
+      "qdt": 1,
+      "id": 15
+    },
+    {
+      "name": "Desenvolvimento web",
+      "priceDefault": 43,
+      "price": 43,
+      "ingredientes": "ddde34444",
+      "image": "",
+      "qdt": 1,
+      "id": 16
+    },
+    {
+      "name": "Pizza Bacon",
+      "priceDefault": 41,
+      "price": 41,
+      "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)",
+      "image": "",
+      "qdt": 1,
+      "id": 17
+    },
+    {
+      "name": "Pizza Bacon",
+      "priceDefault": 18,
+      "price": 18,
+      "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)",
+      "image": "",
+      "qdt": 1,
+      "id": 18
+    },
+    {
+      "name": "Desenvolvimento web",
+      "priceDefault": 55,
+      "price": 55,
+      "category": "Açaí ",
+      "ingredientes": "(Açaí, banana, morango, uva, leite ninho em pó e leite condensado)",
+      "image": "",
+      "qdt": 1,
+      "id": 19
     }
   ]
 }

@@ -7,6 +7,8 @@ type Props={
 export const Box=styled.div<Props>`
 position: fixed;
 justify-content: center;
+align-items: center;
+width: 100%;
 background-color: rgba(38, 34, 36, 0.71);
 display: ${Props=>Props.display=== 'flex' ? 'flex':'none'};
 top: 0;
@@ -54,11 +56,14 @@ export const Mensage=styled.div`
     }
 
     @media screen and (max-width:950px){
-    bottom: 0;
-    margin-top: 23px;
-    width: 100%;
-    font-size: 12px;
-    padding: 15px 9px;
+        p,a{
+            font-size:12px;
+        }
+        bottom: 0;
+        margin-top: 23px;
+        width: 100%;
+        font-size: 12px;
+        padding: 15px 9px;
 }
 
 `

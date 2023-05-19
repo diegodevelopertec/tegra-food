@@ -5,11 +5,9 @@ export const Page=styled.div`
     background-color: #E5E5E5;
     display: flex;
     min-height: 100vh;
-
-    @media screen and (max-width:844px){
-        width: 100vw;
-    }
+    width: 100%;
  
+
 
 `
 

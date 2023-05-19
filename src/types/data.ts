@@ -10,10 +10,11 @@ export type ProductType={
     id:number,
     name:string,
     price:number,
-    priceDefault:number,
-    ingredientes:string,
+    //priceDefault:number,
+    description:string,
     image:string,
     qdt:number,
+    category:string
 }
 
 export type cartType={

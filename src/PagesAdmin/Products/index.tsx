@@ -19,45 +19,62 @@ export const ProductsAdmin=()=>{
 
     const [products,setProducts]=useState<ProductType[]>([])
     const {setOnModal,onMenuMobile,setMenuMobile}=useGlobalContext()
+    const [orderActive,setOrderActive]=useState(false)
     const navigate=useNavigate()
 
     const orderAction=()=>{
         setOnModal(true)
+        setOrderActive(true)
+       
     }
 
     useEffect(()=>{
        let  getProducts=async()=>{
             let data=await useProducsApi.getProducts()
+               
+        if(orderActive){
+            let orderProducts=data.sort()
+            setProducts(orderProducts)
+        }else{
             setProducts(data)
-        
-        
-         
         }
+        }
+     
      getProducts()
-    
-    },[products])
+
+    },[products,orderActive])
 
 
- 
+ useEffect(()=>{
+    if(orderActive){
+        let orderProducts=products.sort()
+        setProducts(orderProducts)
+    }else{
+        setProducts(products)
+    }
+ },[orderActive])
+
+
 
     return<Page onClick={()=>onMenuMobile ? setMenuMobile(false) : null}>
+        
     <Header />
     
   <SectionProducts>
-      <TopMenu />
-      <HeaderPageProducts>
-        <div className="left">
-            <h4 className='title-primary'>Produtos</h4>
-            <div className='title-secondary'>
-                <span className="text">Todos</span>
-                <div className="barra"></div>
-             </div>
-        </div>
-        <div className="right">
-            <img src={order} alt="" onClick={orderAction}/>
-            <button onClick={()=>navigate('/admin/products/new')}>Adicionar <span>+</span></button>
-        </div>
-    </HeaderPageProducts>
+        <TopMenu />
+        <HeaderPageProducts>
+                <div className="left">
+                    <h4 className='title-primary'>Produtos</h4>
+                    <div className='title-secondary'>
+                        <span className="text">Todos</span>
+                        <div className="barra"></div>
+                    </div>
+                </div>
+                <div className="right">
+                    <img src={order} alt="" onClick={orderAction} />
+                    <button onClick={()=>navigate('/admin/products/new')}>Adicionar <span>+</span></button>
+                </div>
+        </HeaderPageProducts>
     <SectionProductsList>
         {
             products.map((i,k)=>(

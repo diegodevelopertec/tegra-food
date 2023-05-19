@@ -22,10 +22,10 @@ export const CardProduct=({product}:Prop)=>{
 
     return <Box>
         <BoxLeft>
-            <img src={product.image} />
+            <img src={`http://localhost:5000/${product.image}`} />
             <div className="text">
                <h3>{product.name}</h3>
-                <p className="desc">{product.ingredientes}</p>
+                <p className="desc">{product.description}</p>
             </div>
         </BoxLeft>
         <BoxRigth>

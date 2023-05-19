@@ -2,17 +2,12 @@ import {useEffect,useState} from 'react'
 import { Header } from "../../Components/Header"
 import { Page, SectionProductsList } from "./style"
 import { SectionProducts} from "./style"
-import Notification from './../../../public/notifications.png'
-import Cart from './../../../public/shopping_cart.png'
-import Profile from './../../../public/unsplash_mEZ3PoFGs_k.png'
 import { ProductType } from '../../types/data'
 import { useProducsApi } from '../../Services/useProductsApi'
 import { CardProduct } from '../../Components/CardProduct'
 import { HeaderPageProducts } from './style'
 import orderInative from './../../../public/order.png'
 import orderActive from './../../../public/orderac.png'
-//import Filter from './../../../public/filter.png'
-import Menu from './../../../public/menu.png'
 import { Modal } from '../../Components/Modal'
 import { TopMenu } from '../../Components/TopMenu'
 import { Filter } from '../../Components/Filter'
@@ -23,38 +18,28 @@ export const ProductPage=()=>{
     const {setOnModal,onModal,onMenuMobile,setMenuMobile}=useGlobalContext()
     const [org,setOrg]=useState(false)
     const [statePageOrg,setStatePageOrg]=useState(false)
-    const [filtered,setFiltered]=useState(false)
     const {filterData}=useGlobalContext()
-
+   
 
     useEffect(()=>{
        let  getProducts=async()=>{
             let data=await useProducsApi.getProducts()
             setProducts(data)
+            if(org){
+                setOrg(false)
+                setProducts(data.sort())
+             }
         }
      getProducts()
-
-     if(org){
-        setOrg(false)
-     }
     
     },[])
 
+   
 
     useEffect(()=>{
-        if(filterData !== null){
-            setProducts(filterData)
-        }
+        if(filterData !== null){setProducts(filterData)}
     },[filterData])
 
-
-    const setOrder=()=>{
-          setOrg(true)
-          setOnModal(true)
-          !statePageOrg ?   setOnModal(true) :   setOnModal(false)
-          statePageOrg ? setStatePageOrg(false) : setStatePageOrg(true)
-          
-    }
    
 setTimeout(()=>{
     if(onModal){
@@ -62,8 +47,16 @@ setTimeout(()=>{
     }
 },1500)
    
+const setOrder=async()=>{
+    setOrg(true)
+    setOnModal(true)
+    !statePageOrg ?   setOnModal(true) :   setOnModal(false)
+    statePageOrg ? setStatePageOrg(false) : setStatePageOrg(true)
+    let data=await  useProducsApi.getProducts()
+
+}
    
-    return <Page onClick={()=>onMenuMobile ? setMenuMobile(false) : null} >
+    return <Page  onClick={()=>onMenuMobile ? setMenuMobile(false) : null} >
       <Header /> 
     <SectionProducts>
         <TopMenu />
@@ -90,15 +83,15 @@ setTimeout(()=>{
         
       </SectionProductsList>
     </SectionProducts>
-    {
-        org &&   <Modal link={" "} textLeft={"Ítens organizados de A à Z" } 
-        textLink={"Cancelar"} ></Modal>
+        {
+            org &&   <Modal link={" "} textLeft={"Ítens organizados de A à Z" } 
+            textLink={"Cancelar"} ></Modal>
 
-    }
-    {
-        (!statePageOrg ||  statePageOrg && !org) &&  <Modal link={"/cart" } textLeft={ "ítem adicionado ao carrinho" } 
-        textLink={"ir para o carrinho" }   ></Modal>
-    }
+        }
+        {
+            (!statePageOrg ||  statePageOrg && !org) &&  <Modal link={"/cart" } textLeft={ "ítem adicionado ao carrinho" } 
+                 textLink={"ir para o carrinho" }  ></Modal>
+        }
         
  
 

@@ -10,10 +10,9 @@ export const Container=styled.div`
 `
 
 export const ContainerImage=styled.div`
-    height: 100vh;
     display: flex;
     img{
-        height: 100vh;
+        height: auto;
     }
 
     @media screen and (max-width:950px)  {
