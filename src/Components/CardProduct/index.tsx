@@ -1,7 +1,7 @@
 import { ProductType } from "../../types/data"
 import { Box, BoxLeft, BoxRigth } from "./style"
 import { useGlobalContext } from "../../Context/appContext"
-import { useLocation } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { addDataCart } from "../../redux/slices/cart"
 
@@ -10,8 +10,9 @@ type Prop={
 }
 
 export const CardProduct=({product}:Prop)=>{
-    const {setOnModal}=useGlobalContext()
+    const {setOnModal,setSharedProduct}=useGlobalContext()
     const dispatch=useDispatch()
+    const navigate=useNavigate()
 
     const addProductToCart=(product:ProductType)=>{
         dispatch(addDataCart(product))
@@ -19,6 +20,13 @@ export const CardProduct=({product}:Prop)=>{
         setOnModal(true)
     }
 
+
+
+    const setSharedtoContext=()=>{
+       setSharedProduct(product)
+       navigate(`/admin/products/update/${product.id}`)
+       
+    }
 
     return <Box>
         <BoxLeft>
@@ -32,7 +40,7 @@ export const CardProduct=({product}:Prop)=>{
             <span >R$ {product.price.toFixed(2).replace('.',',')}</span>
             
             { !location.href.includes('admin') &&   <button onClick={()=>addProductToCart(product)}>comprar</button>}
-            { location.href.includes('admin') &&   <button onClick={()=>{}}>Editar</button>}
+            { location.href.includes('admin') &&   <button onClick={setSharedtoContext}>Editar</button>}
         </BoxRigth>
 
 

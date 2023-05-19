@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react'
 import { ItemFilter,  BoxFilter, BoxTopFilter, BoxItemsFilter, BoxItens} from './style'
-import filter from './../../../public/filter.png'
+import filter from '/filter.png'
 import { toToastItem } from 'react-toastify/dist/utils'
 import { useGlobalContext } from '../../Context/appContext'
 import { useProducsApi } from '../../Services/useProductsApi'

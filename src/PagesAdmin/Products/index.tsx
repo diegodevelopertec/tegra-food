@@ -6,7 +6,7 @@ import { HeaderPageProducts } from "./style"
 import { SectionProductsList } from "./style"
 import { useEffect,useState} from "react"
 import { Filter } from "../../Components/Filter"
-import order from './../../../public/order.png'
+import order from '/order.png'
 import { ProductType } from "../../types/data"
 import { useProducsApi } from "../../Services/useProductsApi"
 import { CardProduct } from "../../Components/CardProduct"

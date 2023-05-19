@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Box=styled.div`
 background-color: rgba(106, 0, 0, 1);
 padding: 38px;
-min-height: 100vh;
+
 
 @media screen and (max-width: 950px) {
     width: 100vw;
@@ -94,6 +94,7 @@ flex-direction: column;
 background-color:#FFFFFF;
 padding: 7px;
 margin-bottom: 38px;
+font-size: 19px;
 
 span{
     font-family: Poppins;

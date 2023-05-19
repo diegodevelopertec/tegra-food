@@ -1,9 +1,9 @@
 import { SectionTop,ButtomMobile } from "./style"
-import Cart from './../../../public/shopping_cart.png'
-import Notification from './../../../public/notifications.png'
-import Profile from './../../../public/unsplash_mEZ3PoFGs_k.png'
-import Menu from './../../../public/menu.png'
-import Inter from './../../../public/inter.png'
+import Cart from '/shopping_cart.png'
+import Notification from '/notifications.png'
+import Profile from '/unsplash_mEZ3PoFGs_k.png'
+import Menu from '/menu.png'
+import Inter from '/inter.png'
 import { useGlobalContext } from "../../Context/appContext"
 import { useNavigate } from "react-router-dom"
 

@@ -4,29 +4,31 @@ import { useGlobalContext } from "../../Context/appContext"
 import { useProducsApi } from "../../Services/useProductsApi"
 import {  useState } from "react"
 import { useActionData, useNavigate } from "react-router-dom"
+import { ProductType } from "../../types/data"
 
 
 type FormData={
+   id:number,
   name:string,
   category:string,
   description:string,
-  price:string,
-  image:File | null
+  price:number | string,
+  image:File 
 }
 
 
 
 
   
-export const AddNewProduct=()=>{
+export const UpdateProduct=()=>{
     const navigate=useNavigate()
-    const {setOnModal}=useGlobalContext()
-    const [name,setName]=useState('')
-    const [description,setDescription]=useState('')
-    const [price,setPrice]=useState('')
-    const [category,setCategory]=useState('')
-    const [selectedImage, setSelectedImage] = useState<File | null>(null);
-
+    const {setOnModal,sharedProduct,setSharedProduct}=useGlobalContext()
+    const [name,setName]=useState<string>(sharedProduct!.name)
+    const [description,setDescription]=useState(sharedProduct!.description)
+    const [price,setPrice]=useState<string | number>(sharedProduct!.price.toFixed(2).replace('.',','))
+    const [category,setCategory]=useState(sharedProduct!.category)
+    const [selectedImage, setSelectedImage] = useState<File  >(sharedProduct!.image as File);
+  
 
   
 
@@ -45,28 +47,23 @@ const handleSubmit=async(e: React.FormEvent<HTMLFormElement>)=>{
     }
     formData.append('description', description);
     formData.append('category', category);
-    formData.append('price', price);
+    formData.append('price', price as string);
 
   
     const productPost: FormData = {
+         id:sharedProduct!.id,
          name:formData.get('name') as string,
          category:formData.get('category') as string,
          description:formData.get('description') as string,
          price:formData.get('price') as string,
          image:formData.get('image') as File,
         }
-    
-        console.log(productPost);
-        await useProducsApi.addProduct(productPost)
-
-       setName('')
-       setCategory('')
-       setDescription('')
-       setPrice('')
-       setSelectedImage(null)
-
-
-    
+      
+        
+        await useProducsApi.updateProduct({
+            ...productPost,
+            price:parseFloat(productPost.price as string)
+        })
 
 }
 
@@ -74,7 +71,7 @@ const handleSubmit=async(e: React.FormEvent<HTMLFormElement>)=>{
     return <Box>
 
         <BoxContent>
-            <h2>Novo Item</h2>
+            <h2>Atualizar Item</h2>
            <form  method="POST" encType="multipart/form-data" onSubmit={handleSubmit} > 
             <BoxInputs>
                 <CxInputsForm>

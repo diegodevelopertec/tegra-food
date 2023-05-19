@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Box, BoxCupomTableCart, BoxPage, CarLastSection, CardCumpom, ContainerProductsCart, TableCart } from "./style";
 import { TopMenu } from "../../Components/TopMenu";
-import Cart from './../../../public/shopping_cart.png'
+import Cart from '/shopping_cart.png'
 import { CardProductCart } from "../../Components/CardProductCart";
 import { useAppSelector } from "../../hooks/useAppSelector";
 import { useGlobalContext } from "../../Context/appContext";

@@ -1,7 +1,7 @@
 import { Container, LogoContainer } from "./style"
 import { Nav } from "./style"
 import {Link, useNavigate} from 'react-router-dom'
-import Logo from './../../../public/logo.png'
+import Logo from '/logo.png'
 import { useGlobalContext } from "../../Context/appContext"
 import { useState } from "react"
 import { useProducsApi } from "../../Services/useProductsApi"

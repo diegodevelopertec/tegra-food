@@ -42,6 +42,20 @@ export const useProducsApi={
       }
        
     },
+    updateProduct:async(product:ProductType)=>{
+        try{
+          let res=await axios.put(`${baseUrl}products/${product.id}`,product,{
+              headers: {
+                  'Content-Type': 'multipart/form-data',
+                }
+          })
+          console.log('produto atualizado com sucesso!');
+          return res.data
+        }catch(e){
+          console.error('Erro ao enviar o usuário:', e);
+        }
+         
+      },
 
     deleteProduct:async(id:number)=>{
         try{

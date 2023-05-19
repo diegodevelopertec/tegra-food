@@ -6,11 +6,14 @@ import {GlobalStyle} from './../../ThemeStyle'
 export const Container=styled.div`
     background-color:${'#FFFFFF'};
     display: flex;
-    overflow: none;
+    min-height: 100vh;
+
+
 `
 
 export const ContainerImage=styled.div`
     display: flex;
+
     img{
         height: auto;
     }
